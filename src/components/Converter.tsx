@@ -7,8 +7,8 @@ import { View, Text, TextInput, StyleSheet, Button, } from 'react-native';
 function Converter() {
 
     //Variables de estado
-    const [origen, setOrigen] = useState('cm')
-    const [destino, setDestino] = useState('mt')
+    const [origen, setOrigen] = useState('')
+    const [destino, setDestino] = useState('')
     const [convertir, setConvertir] = useState(0)
     const [resultado, setResultado] = useState(0)
 
@@ -25,10 +25,17 @@ function Converter() {
         setConvertir(number)
     }
     const handleCalcular = () => {
-        //alert('holaaa')
         if (origen === 'cm' && destino === 'mt') {
             const result = convertir / 100
-            //console.log(result)
+            setResultado(result)
+        } else if(origen === 'mm' && destino === 'cm') {
+            const result = convertir / 10.000
+            setResultado(result)
+        } else if (origen === 'mm' && destino === 'mt') {
+            const result = convertir / 1000.0
+            setResultado(result)
+        } else if (origen === 'mm' && destino === 'km') {
+            const result = convertir / 1000000
             setResultado(result)
         }
     }
