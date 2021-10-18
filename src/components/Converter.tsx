@@ -24,9 +24,17 @@ function Converter() {
         const number = parseFloat(texto)
         setConvertir(number)
     }
+
     const handleCalcular = () => {
+
         if (origen === 'cm' && destino === 'mt') {
             const result = convertir / 100
+            setResultado(result)
+        } else if (origen === 'cm' && destino === 'mm') {
+            const result = convertir / 0.10000
+            setResultado(result)
+        } else if (origen == 'cm' && destino === 'km') {
+            const result = convertir / 100000
             setResultado(result)
         } else if(origen === 'mm' && destino === 'cm') {
             const result = convertir / 10.000
@@ -36,6 +44,12 @@ function Converter() {
             setResultado(result)
         } else if (origen === 'mm' && destino === 'km') {
             const result = convertir / 1000000
+            setResultado(result)
+        } else if (origen === 'mt' && destino === 'mm') {
+            const result = convertir  / 0.0010000
+            setResultado(result)
+        } else if (origen === 'km' && destino === 'mm') {
+            const result = convertir / 0.0000010000
             setResultado(result)
         }
     }
