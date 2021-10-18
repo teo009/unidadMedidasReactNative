@@ -48,6 +48,12 @@ function Converter() {
         } else if (origen === 'mt' && destino === 'mm') {
             const result = convertir  / 0.0010000
             setResultado(result)
+        } else if (origen === 'mt' && destino === 'cm') {
+            const result = convertir / 0.010000
+            setResultado(result)
+        } else if (origen === 'mt' && destino === 'km') {
+            const result = convertir / 1000.0
+            setResultado(result)
         } else if (origen === 'km' && destino === 'mm') {
             const result = convertir / 0.0000010000
             setResultado(result)
