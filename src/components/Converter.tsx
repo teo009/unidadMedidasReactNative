@@ -57,6 +57,12 @@ function Converter() {
         } else if (origen === 'km' && destino === 'mm') {
             const result = convertir / 0.0000010000
             setResultado(result)
+        } else if (origen === 'km' && destino === 'cm') {
+            const result = convertir / 0.000010000
+            setResultado(result)
+        } else if (origen === 'km' && destino === 'mt') {
+            const result = convertir / 0.0010000
+            setResultado(result)
         }
     }
 
